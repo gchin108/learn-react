@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { faqs } from "@/constants";
 
-export default function AccordionExample() {
+export default function AccordionV1() {
   return (
     <div className="flex flex-col gap-4">
       <Accordion data={faqs} />
@@ -33,6 +33,7 @@ const AccordionItem = ({title,text, num})=>{
         className={`bg-[#333] p-8 flex flex-col gap-6 w-[700px] ${
           isOpen && "border-t-4 border-orange-500"
         }`}
+        onClick={handleToggle}
       >
         <div className="flex justify-between items-center">
           <div className="flex gap-4 items-center">
@@ -48,7 +49,7 @@ const AccordionItem = ({title,text, num})=>{
             </p>
           </div>
 
-          <button className="text-xl text-slate-gray" onClick={handleToggle}>
+          <button className="text-xl text-slate-gray">
             {isOpen ? "-" : "+"}
           </button>
         </div>

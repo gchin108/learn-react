@@ -1,10 +1,10 @@
 "use client"
 import React from 'react'
 
-const Button = ({text, color, func, moreClass}) => {
+const Button = ({color, func, moreClass, children}) => {
   return (
-      <button onClick={func} className={`p-2 rounded-full w-20 ${moreClass}`} style={{backgroundColor:`${color}`}}>
-        {text}
+      <button onClick={func} className={`p-2 rounded-full ${moreClass}`} style={{backgroundColor:`${color}`}}>
+        {children}
       </button>
   );
 }

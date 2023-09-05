@@ -69,7 +69,7 @@ export const PageLinks = [
     links: [
       { name: "Home", link: "/" },
       { name: "Use State", link: "/UseState" },
-      {name: "Travel-List", link:"/travel-todos"},
+      { name: "State-Projects", link: "/State-Projects" },
       { name: "Use Effect", link: "/" },
       { name: "Experiment", link: "/" },
     ],
@@ -87,5 +87,26 @@ export const faqs = [
   {
     title: "Do you ship to countries outside the EU?",
     text: "Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias!",
+  },
+];
+
+export const initialFriends = [
+  {
+    id: 118836,
+    name: "Clark",
+    image: "https://i.pravatar.cc/48?u=118836",
+    balance: -7,
+  },
+  {
+    id: 933372,
+    name: "Sarah",
+    image: "https://i.pravatar.cc/48?u=933372",
+    balance: 20,
+  },
+  {
+    id: 499476,
+    name: "Anthony",
+    image: "https://i.pravatar.cc/48?u=499476",
+    balance: 0,
   },
 ];
