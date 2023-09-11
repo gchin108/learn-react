@@ -47,6 +47,7 @@ const EatnSplit = () => {
 
       {selectedFriend && (
         <FormSplit
+          key={selectedFriend.id}
           selectedFriend={selectedFriend}
           onSplitBills={handleSplitBills}
         />

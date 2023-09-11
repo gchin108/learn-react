@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const LeftBar = () => {
   return (
-    <div className="absolute ml-2 top-3">
+    <div className="absolute ml-2 top-3 max-lg:hidden">
       <h2 className="text-md font-mono mb-5">Menu</h2>
       {PageLinks.map((page, index) => (
         <div key={index} className="flex flex-col gap-2">

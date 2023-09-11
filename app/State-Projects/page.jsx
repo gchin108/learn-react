@@ -6,8 +6,8 @@ const TravelToDos = () => {
   return (
     <div className="max-container flex flex-col items-center gap-4">
       {/* <ListApp/> */}
-      {/* <EatnSplit/> */}
-      <ToDoList/>
+      <EatnSplit/>
+      {/* <ToDoList/> */}
     </div>
   );
 }

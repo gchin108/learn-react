@@ -12,7 +12,7 @@ const FormSplit = ({ selectedFriend, onSplitBills }) => {
     onSplitBills(whoIsPaying==="user"? (bill - paidByUser): (-paidByUser))
   }
   return (
-    <form className="flex flex-col gap-4 bg-[#333] h-fit p-4"onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-4 bg-[#333] h-fit p-4"onSubmit={handleSubmit} >
       <h3>Split the bill with {selectedFriend.name}</h3>
       <div className="flex gap-2 items-center justify-between">
         <p>💰 Bill Value</p>
@@ -52,15 +52,6 @@ const FormSplit = ({ selectedFriend, onSplitBills }) => {
         <select
           className="text-black"
           onChange={(e) => setWhoIsPaying(e.target.value)}
-          //   value={whoIsPaying}
-          //   onChange={(e) => {
-          //     const selectedValue = Boolean(e.target.value);
-          //     if (selectedValue === "me") {
-          //       onSetBill("iPay", true);
-          //     } else {
-          //       onSetBill("iPay", false);
-          //     }
-          //   }}
         >
           <option value="user">You</option>
           <option value="friend">{selectedFriend.name}</option>
