@@ -2,6 +2,8 @@
 import CurrencyConverter from '@/components/challenges/CurrencyConverter';
 import Geolocation from '@/components/challenges/Geolocation';
 import App from '@/components/challenges/TextExpander';
+import DateCounter from '@/components/exercises/DateCounterV2';
+import DayCounterV2 from '@/components/exercises/DayCounterV2';
 import DevProfile from '@/components/exercises/DevProfile'
 import FlashCard from '@/components/exercises/FlashCard'
 import FlashCard2 from '@/components/exercises/FlashCard2.0'
@@ -21,7 +23,8 @@ export default function Home() {
       <p>This movie was rated {movieRating} stars</p> */}
       {/* <App/> */}
       {/* <CurrencyConverter/> */}
-      <Geolocation/>
+      {/* <Geolocation/> */}
+      <DateCounter/>
     </main>
   );
 }

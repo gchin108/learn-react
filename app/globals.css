@@ -10,6 +10,15 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --color-darkest: #343a40;
+  --color-dark: #495057;
+  --color-medium: #ced4da;
+  --color-light: #f1f3f5;
+
+  --color-theme: #1098ad;
+  --color-accent: #ffa94d;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,7 +31,8 @@
 @layer components {
   .max-container {
     max-width: 1440px;
-    margin: 20px auto;
+    margin:  auto;
+    padding-top: 20px;
 
   }
   .main-container {
@@ -41,8 +51,9 @@
     @apply bg-[#7950f2]
   }
   .small-btn{
-    @apply w-fit rounded-md bg-gray-400 px-2
+    @apply w-fit rounded-md bg-[#495057] px-2 hover:bg-[#222]
   }
+
 }
 
 body {

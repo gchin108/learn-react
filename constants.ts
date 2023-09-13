@@ -71,6 +71,7 @@ export const PageLinks = [
       { name: "Use State", link: "/UseState" },
       { name: "State-Projects", link: "/State-Projects" },
       { name: "usePopcorn", link: "/usePopcorn" },
+      { name: "ReactQuiz", link: "/react-quiz" },
       { name: "Use Effect", link: "/" },
       { name: "Experiment", link: "/" },
     ],
