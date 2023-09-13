@@ -96,13 +96,6 @@ export default function ReactQuiz() {
     fetchData();
   }, []);
 
-    // useEffect(() => {
-
-    //   document.title = "The React Quiz";
-    //   return document.title = "Learn React"
-
-    // }, []);
-
 
   return (
     <div className="relative">

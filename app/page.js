@@ -1,4 +1,6 @@
 // "use client"
+import BankAccount from '@/components/challenges/BankAccount';
+import BankAccountV2 from '@/components/challenges/BankAccountV2';
 import CurrencyConverter from '@/components/challenges/CurrencyConverter';
 import Geolocation from '@/components/challenges/Geolocation';
 import App from '@/components/challenges/TextExpander';
@@ -24,7 +26,8 @@ export default function Home() {
       {/* <App/> */}
       {/* <CurrencyConverter/> */}
       {/* <Geolocation/> */}
-      <DateCounter/>
+      {/* <DateCounter/> */}
+      <BankAccountV2/>
     </main>
   );
 }

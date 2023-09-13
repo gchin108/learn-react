@@ -41,7 +41,7 @@ const UseState1 = () => {
               ) => (
                 <div
                   key={i}
-                  className={`rounded-div ${
+                  className={`rounded-full h-10 w-10 flex justify-center items-center ${
                     step >= i ? "active" : "bg-gray-500"
                   }`}
                 >
@@ -52,7 +52,7 @@ const UseState1 = () => {
           </div>
           <StepMessage step={step}>
             {messages[step - 1]}
-            <br/>
+            <br />
             <Button
               color="#7950f2"
               func={() => alert(`Learn how to ${messages[step - 1]}`)}
