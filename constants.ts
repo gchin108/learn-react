@@ -158,4 +158,3 @@ export const tempWatchedData = [
     userRating: 9,
   },
 ];
-export const API_KEY = process.env.REACT_APP_KEY;
