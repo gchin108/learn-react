@@ -1,6 +1,5 @@
-"use client"
-import { useState } from "react";
-
+"use client";
+import { useEffect, useState } from "react";
 
 export default function App() {
   return (
@@ -26,7 +25,10 @@ export default function App() {
         foot on the moon or when rovers were sent to roam around on Mars.
       </TextExpander>
 
-      <TextExpander expanded={true} addClass="rounded-sm border-2 border-[#ccc] p-[10px]">
+      <TextExpander
+        expanded={true}
+        addClass="rounded-sm border-2 border-[#ccc] p-[10px]"
+      >
         Space missions have given us incredible insights into our universe and
         have inspired future generations to keep reaching for the stars. Space
         travel is a pretty cool thing to think about. Who knows what we'll
@@ -36,7 +38,6 @@ export default function App() {
   );
 }
 const CollapsedText = ({ text, wordCount }) => {
-
   function collapseSentence(sentence, count) {
     const words = sentence.split(" "); //split the sentence into an array when each word is a seperated element in the array
     if (words.length <= count) {
@@ -50,14 +51,20 @@ const CollapsedText = ({ text, wordCount }) => {
 };
 function TextExpander({
   children,
-  collapsedNumWords=10,
-  expandButtonText="show more",
-  collapseButtonText="show less",
+  collapsedNumWords = 10,
+  expandButtonText = "show more",
+  collapseButtonText = "show less",
   buttonColor,
   expanded,
   addClass,
 }) {
   const [isExpanded, setIsExpanded] = useState(expanded);
+  const needExpansion = children.split(" ").length > collapsedNumWords;
+
+  useEffect(() => {
+    //added this so expanded prop is now in sync with the function
+    setIsExpanded(expanded);
+  }, [expanded]);
 
   return (
     <div className={`font-sans flex gap-2 mb-2 ${addClass}`}>
@@ -66,13 +73,15 @@ function TextExpander({
       ) : (
         <CollapsedText text={children} wordCount={collapsedNumWords} />
       )}
-      <button
-        className={`${!buttonColor && "bg-blue-700"} rounded-lg px-2`}
-        style={{ backgroundColor: `${buttonColor}` }}
-        onClick={() => setIsExpanded(!isExpanded)}
-      >
-        {isExpanded ? collapseButtonText : expandButtonText}
-      </button>
+      {needExpansion && (
+        <button
+          className={`${!buttonColor && "text-blue-700"} rounded-lg px-2`}
+          style={{ color: `${buttonColor}` }}
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          {isExpanded ? collapseButtonText : expandButtonText}
+        </button>
+      )}
     </div>
   );
 }

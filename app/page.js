@@ -23,11 +23,12 @@ export default function Home() {
       {/* <StarRating maxRating={5} messages={["Terrible","Bad", "Okay", "Good", "Great!"]}/> */}
       {/* <StarRating color="blue" maxRating={10} onSetRating={setMovieRating} />
       <p>This movie was rated {movieRating} stars</p> */}
-      {/* <App/> */}
+      <App/>
       {/* <CurrencyConverter/> */}
       {/* <Geolocation/> */}
       {/* <DateCounter/> */}
-      <BankAccountV2/>
+      {/* <BankAccountV2/> */}
+  
     </main>
   );
 }

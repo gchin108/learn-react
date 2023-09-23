@@ -1,0 +1,169 @@
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 1.6rem;
+
+  color: var(--color-medium);
+  font-size: 1.4rem;
+}
+/* CREDIT: https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
+.loader {
+  width: 50px;
+  height: 24px;
+  background: radial-gradient(circle closest-side, currentColor 90%, #0000) 0%
+      50%,
+    radial-gradient(circle closest-side, currentColor 90%, #0000) 50% 50%,
+    radial-gradient(circle closest-side, currentColor 90%, #0000) 100% 50%;
+  background-size: calc(100% / 3) 12px;
+  background-repeat: no-repeat;
+  animation: loader 1s infinite linear;
+}
+
+@keyframes loader {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
+.timer {
+  float: left;
+  font-size: 1rem;
+  color: var(--color-medium);
+  border: 2px solid var(--color-dark);
+  padding: .4rem 3rem;
+  border-radius: 100px;
+}
+
+.error {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 2rem;
+  background-color: #495057;
+  border-radius: 100px;
+}
+
+.appHeader {
+  width: 66rem;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.btn {
+  display: block;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-dark);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
+.btn:not([disabled]):hover {
+  background-color: var(--color-darkest);
+}
+
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+}
+
+.btnUi {
+  float: right;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.btnOption:not([disabled]):hover {
+  transform: translateX(1.2rem); 
+}
+
+.btnOption {
+  width: 100%;
+  text-align: left;
+}
+
+.btnOption.correct {
+  background-color: var(--color-theme);
+  border: 2px solid var(--color-theme);
+  color: var(--color-light);
+}
+
+.btnOption.wrong {
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  color: var(--color-darkest);
+}
+.answer {
+  transform: translateX(2rem);
+}
+
+.result {
+  background-color: var(--color-theme);
+  color: var(--color-light);
+  border-radius: 100px;
+  text-align: center;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+  width: fit-content;
+  margin: auto;
+}
+
+.progressHeader {
+  margin-bottom: 4rem;
+  display: grid;
+  justify-content: space-between;
+  gap: 1.2rem;
+  grid-template-columns: auto auto;
+  font-size: 1.8rem;
+  color: var(--color-medium);
+}
+
+.customProgress {
+  /* -webkit-appearance: none; */
+  width: 100%;
+  height: 12px;
+  grid-column: 1 / -1;
+}
+
+.customProgress::-webkit-progress-bar {
+  background-color: var(--color-medium);
+  border-radius: 100px;
+}
+
+.customProgress::-webkit-progress-value {
+  background-color: var(--color-theme);
+  border-radius: 100px;
+}
